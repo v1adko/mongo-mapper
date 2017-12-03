@@ -1,0 +1,73 @@
+[
+  {
+    "id": "rJT9XbLd",
+    "manufacturer": "Apple",
+    "name": "iPhone 6S",
+    "price": 650,
+    "rating": 80,
+    "single": 1,
+    "nested": {
+      "one": "1",
+      "two": "2"
+    }
+  },
+  {
+    "id": "SJe6cQWU_",
+    "manufacturer": "Apple",
+    "name": "iPad 2016",
+    "price": 800,
+    "rating": 54,
+    "single": 1,
+    "nested": {
+      "one": "1",
+      "two": "two"
+    }
+  },
+  {
+    "id": "BJZ69mbL_",
+    "manufacturer": "Apple (China)",
+    "name": "MackBook Pro Retina 2015 13'",
+    "price": 1199,
+    "rating": 91,
+    "single": 2,
+    "nested": {
+      "one": "one",
+      "two": "two"
+    }
+  },
+  {
+    "id": "SJM6qQZLu",
+    "manufacturer": "Apple",
+    "name": "MackBook Pro Retina 2015 15'",
+    "price": 1495,
+    "rating": 96,
+    "single": 2,
+    "nested": {
+      "one": "one",
+      "two": "2"
+    }
+  },
+  {
+    "id": "SkVp5Q-8O",
+    "manufacturer": "Apple (China)",
+    "price": 550,
+    "rating": 78,
+    "single": 3,
+    "nested": {
+      "one": "1",
+      "two": "2"
+    }
+  },
+  {
+    "id": "SkST9mbIO",
+    "manufacturer": "Apple Inc.",
+    "name": "Apple Watch",
+    "price": 400,
+    "rating": 69,
+    "single": 3,
+    "nested": {
+      "one": "one",
+      "two": "two"
+    }
+  }
+]

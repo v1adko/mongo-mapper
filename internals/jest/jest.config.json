@@ -1,0 +1,21 @@
+{
+    "testEnvironment": "node",
+    "rootDir": "../../",
+    "collectCoverageFrom": [
+      "src/**"
+    ],
+    "coverageDirectory": "coverage",
+    "coveragePathIgnorePatterns": [
+      "/tests/",
+      "__tests__"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "statements": 0,
+        "branches": 0,
+        "functions": 0,
+        "lines": 0
+      }
+    }
+  }
+  
