@@ -24,7 +24,7 @@
     "start": "yarn start:development",
     "start:development": "backpack dev",
     "start:production": "node ./build/main.js",
-    "postinstall": "backpack build",
+    "postinstall": "./node_modules/backpack-core/bin/build",
     "build": "yarn build:clean && backpack build",
     "build:clean": "rm -rf build coverage",
     "test": "jest --runInBand --forceExit --config ./internals/jest/jest.config.json",
