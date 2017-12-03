@@ -1,19 +1,17 @@
-import get from 'lodash.get';
+const get = require('lodash.get');
 
 // Can be used outside of testing (jest)
-export default class MongoMapper {
-  dbContextPromise;
-  OMIT_MONGO_ID = true;
-
-  constructor(contextPromise) {
+class MongoMapper {
+  constructor(contextPromise, options = {}) {
     this.dbContextPromise = contextPromise;
+    this.options = options;
   }
 
   getDbContext() {
     return this.dbContextPromise;
   }
 
-  getResultValue = (result, method) => {
+  getResultValue(result, method) {
     switch (method) {
     case 'findAndModify':
       return result.value;
@@ -27,18 +25,19 @@ export default class MongoMapper {
     const dbContext = await this.getDbContext();
     const result = await dbContext.collection(collection)[method](...params);
     const value = this.getResultValue(result, method);
-    
-    if (value && value._id && this.OMIT_MONGO_ID) {
+
+    if (value && value._id && this.options.omitMongoId) {
       delete value._id;
     }
-    
+
     return resultKey ? get(value, resultKey) : value;
   }
 
-  cursorToArray = cursor =>
-    new Promise((resolve, reject) =>
+  cursorToArray(cursor) {
+    return new Promise((resolve, reject) =>
       cursor.toArray((err, docs) => (err ? reject(err) : resolve(docs)))
     );
+  }
 
   findOne(collection, params) {
     return this.executeMongoMethod(collection, 'findOne', undefined, params);
@@ -137,3 +136,5 @@ export default class MongoMapper {
     return this.getDbContext().then(db => db.dropDatabase());
   }
 }
+
+module.exports = MongoMapper;

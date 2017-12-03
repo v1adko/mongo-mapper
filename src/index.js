@@ -1,5 +1,5 @@
-import MongoMapperProvider from './mongo-mapper-provider';
-import { connectionString as defaultConnectionString } from './config'
+const MongoMapperProvider = require('./mongo-mapper-provider');
+const { connectionString: defaultConnectionString } = require('./config');
 
 const mongoMapperProvider = new MongoMapperProvider();
 
@@ -14,4 +14,4 @@ const getMongoMapper = ({
     isTesting
   });
 
-export default getMongoMapper;
+module.exports = getMongoMapper;

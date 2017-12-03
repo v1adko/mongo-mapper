@@ -1,6 +1,6 @@
-import MongoMapper from './mongo-mapper';
+const MongoMapper = require('./mongo-mapper');
 
-export default class TestMongoMapper extends MongoMapper {
+class TestMongoMapper extends MongoMapper {
   async haveOneInCollection(collection, documentParams) {
     const dbDocument = await this.findOne(collection, documentParams);
     if (dbDocument === null) {
@@ -47,3 +47,5 @@ export default class TestMongoMapper extends MongoMapper {
     }
   }
 }
+
+module.exports = TestMongoMapper;

@@ -6,4 +6,4 @@ const safeRequire = (path, condition) => {
   return null;
 };
 
-export default safeRequire;
+module.exports = safeRequire;

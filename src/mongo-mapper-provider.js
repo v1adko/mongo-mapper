@@ -1,12 +1,10 @@
-import { MongoClient } from 'mongodb';
-import get from 'lodash.get';
-import MongoMapper from './test-mongo-mapper';
-import TestMongoMapper from './test-mongo-mapper';
-import safeRequire from './utils/safe-require';
+const { MongoClient } = require('mongodb');
+const get = require('lodash.get');
+const MongoMapper = require( './test-mongo-mapper');
+const TestMongoMapper = require( './test-mongo-mapper');
+const safeRequire = require( './utils/safe-require');
 
 class MongoMapperProvider {
-  dbContext = null;
-
   getMongoMapper({ isTesting, connectionString, useMongoose }) {
     const dbContextPromise = this.getDbContextPromise(
       connectionString,
@@ -55,4 +53,4 @@ class MongoMapperProvider {
   }
 }
 
-export default MongoMapperProvider;
+module.exports = MongoMapperProvider;
