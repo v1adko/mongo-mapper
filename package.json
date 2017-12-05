@@ -1,7 +1,7 @@
 {
   "name": "mongo-mapper",
   "repository": "github:v1adko/mongo-mapper",
-  "version": "1.0.0",
+  "version": "1.0.0-alpha",
   "license": "MIT",
   "description": "Make Mongo data-manipulations in testing a breeze",
   "keywords": [
@@ -12,7 +12,7 @@
   ],
   "author": "Vlad Kolbaya <vlad.kolbaya@gmail.com> (https://github.com/v1adko)",
   "contributors": [
-    "Denys Ostapenko denis.ostapenko2@gmail.com>  (https://github.com/TK95)"
+    "Denis Ostapenko <denis.ostapenko2@gmail.com>  (https://github.com/TK95)"
   ],
   "main": "./src/index.js",
   "engines": {
